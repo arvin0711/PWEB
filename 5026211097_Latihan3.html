@@ -1,0 +1,242 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        CALCULATOR BMI
+    </title>
+    <style>
+        body {}
+
+
+        p {
+            margin: 10px;
+        }
+
+
+        h2 {
+
+
+            margin: 20px;
+        }
+
+
+
+        .form-group {
+            width: 250px;
+            align-content: center;
+
+            p {}
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        function hitung() { //seperti function di java
+            var berat = parseFloat(document.getElementById("berat").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+            var bbi = berat / (tinggi * tinggi);
+            console.log("Hasil Penjumlahan : " + bbi);
+            return bbi;
+        }
+
+        function keterangan() {
+            var berat = parseFloat(document.getElementById("berat").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+            var bbi = berat / (tinggi * tinggi);
+            if (bbi < 18.1) {
+                var ket = "kamu  terlalu kurus, tolong perbanyak makan !";
+            } else if (bbi < 23.1) {
+                var ket = "Badanmu normal, tolong jaga tubuhmu !";
+            } else if (bbi < 28.1) {
+                var ket = "Kamu sedikit kegemukan, lakukan olahraga ringan !";
+            } else {
+                var ket = "Kamu obesitas, pergilah ke gym !!!";
+            }
+            return ket;
+        }
+
+        function cetak() {
+            document.getElementById("bbi").textContent = hitung();
+            document.getElementById("ket").textContent = keterangan();
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="container" id="utama">
+        <div class="container" style="text-align: center;">
+            <div class="row">
+
+                <div class="col-md-12 mt-5">
+                    <div>
+                        <h2>Kalkulator Berat Badan Ideal</h2>
+                        <p>Kalkulator berat badan ideal (BBI) adalah tools yang dapat anda gunakan baik pria maupun
+                            wanita
+                            untuk
+                            menghitung berat tubuh Ideal anda. Dengan kalkulator kesehatan online ini, anda dapat
+                            menjadikannya
+                            referensi dalam menentukan apakah anda kelebihan atau kekurangan berat badan. Mudah
+                            digunakan
+                            dan tentunya
+                            gratis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4" style="border: solid;  padding: 15px;">
+
+                <h3 style="text-align: center;">Kalkulator BMI</h3>
+                <h5 style="text-align: center;">Cek berat badan ideal kamu dengan Kalkulator BMI</h5>
+                <div class="form-group" style="position:center ;">
+                    <label for="berat">Berat Badan(Kg)</label>
+                    <input class=" form-control" type="number" id="berat" name="berat"
+                        placeholder="Masukkan berat badanmu">
+                    <label for="bil2">Tinggi Badan(cm)</label>
+                    <input class="form-control" type="text" id="tinggi" name="tinggi"
+                        placeholder="Masukkan tinggi badanmu">
+                    <button class="btn btn-success" onclick="cetak()">Hitung </button>
+                    <h2>
+                        <div id="bbi"></div>
+                    </h2>
+                    <h2>
+                        <div id="ket"></div>
+                    </h2>
+
+
+
+
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+    <div class="container" style="text-align: center;">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <div>
+                    <img src="image/BMI.jpg" style="height: 300px;">
+                    <h2>Mulai Hidup Sehat dari Sekarang!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 mt-5 mb-5">
+                <div class="container">
+                    <img src="image/BMI-1.jpg" class="rounded" style="float:left" height="200px">
+                    <div class="bg-light rounded-circle">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5 mb-5">
+                <div class="container">
+                    <img src="image/BMI-2.jpg" class="rounded" style="float:left" height="200px">
+                    <div class="bg-light rounded-circle">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5 mb-5">
+                <div class="container">
+                    <img src="image/BMI-3.jpg" class="rounded" style="float:left" height="200px">
+                    <div class="bg-light rounded-circle">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <h2 style="text-align:center;">Manfaat Pakai Kalkulator BMI</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <div class="container">
+                    <img src="image/centang.jpg" class="rounded-circle" style="float:left" height="120px">
+                    <div class="bg-light rounded-circle">
+                        <h4>Jaga Kesehatan Badan</h4>
+                        <p>Saat kamu tahu nilai BMI-mu, kamu bisa lebih menjaga kesehatan badanmu, lho. Itu karena berat
+                            badan adalah salah satu indikator dari kondisi kesehatanmu.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-5">
+                <div class="container">
+                    <img src="image/centang.jpg" class="rounded-circle" style="float:left" height="120px">
+                    <div class="bg-light rounded-circle">
+                        <h4>Ketahui Indeks Massa Tubuh (IMT)</h4>
+                        <p>Body Mass Index atau Indeks Massa Tubuh dihitung berdasarkan berat dan tinggi badan. Dari
+                            nilai BMI, kamu bisa tahu apakah kondisi badanmu sudah termasuk ideal atau belum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5 mb-5">
+                <div class="container">
+                    <img src="image/centang.jpg" class="rounded-circle" style="float:left" height="120px">
+                    <div class="bg-light rounded-circle">
+                        <h4>Lebih Waspada Sama Berat Badan</h4>
+                        <p>Dari nilai BMI yang dipantau secara teratur, kamu bisa lebih waspada untuk menjaga berat
+                            badan supaya ngga terlalu tinggi atau terlalu rendah.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-5 mb-5">
+                <div class="container">
+                    <img src="image/centang.jpg" class="rounded-circle" style="float:left" height="120px">
+                    <div class="bg-light rounded-circle">
+                        <h4>Jauhi Obesitas</h4>
+                        <p>Sayangi badanmu dengan cara menjaga indeks massa tubuh (IMT) supaya ngga melewati batas
+                            normal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
